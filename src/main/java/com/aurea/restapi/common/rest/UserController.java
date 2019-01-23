@@ -31,17 +31,25 @@ public class UserController {
         return user();
     }
 
+    /**
+     * Projection view is defined via annotation on endpoint method.
+     */
     @JsonView(Details.class)
     @GetMapping("/op3")
     public User op3() {
         return user();
     }
 
+    /**
+     * Dynamic projection based on request param value.
+     */
     @GetMapping("/op4")
     public MappingJacksonValue op4(
             @RequestParam(name = PROJECTION_PARAM, required = false) final String projectionName) {
         val result = new MappingJacksonValue(user());
 
+        // One option is to set serialization view class inside controller.
+        // Another one is to use ControllerAdvice, see ResponseProjectionControllerAdvice class.
         val viewClass = resolveProjection(projectionName);
         result.setSerializationView(viewClass);
 
