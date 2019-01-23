@@ -16,7 +16,6 @@
   <properties>
     <java.version>1.8</java.version>
     <springfox.version>2.9.2</springfox.version>
-    <retrofit2.version>2.3.0</retrofit2.version>
   </properties>
 
   <dependencies>
@@ -38,28 +37,6 @@
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger-ui</artifactId>
       <version>${springfox.version}</version>
-    </dependency>
-
-    <!-- Retrofit2 dependencies -->
-    <dependency>
-      <groupId>com.squareup.retrofit2</groupId>
-      <artifactId>retrofit</artifactId>
-      <version>${retrofit2.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.squareup.retrofit2</groupId>
-      <artifactId>converter-gson</artifactId>
-      <version>${retrofit2.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.squareup.retrofit2</groupId>
-      <artifactId>converter-scalars</artifactId>
-      <version>${retrofit2.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.squareup.retrofit2</groupId>
-      <artifactId>adapter-rxjava</artifactId>
-      <version>${retrofit2.version}</version>
     </dependency>
 
     <dependency>
